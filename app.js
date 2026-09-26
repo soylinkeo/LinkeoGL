@@ -141,57 +141,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Native Share or Fallback Copy (using LINKEO_URL)
+  // Native Share or Fallback Copy (strictly LINKEO_URL)
   if (shareTriggerBtn) {
     shareTriggerBtn.addEventListener('click', async () => {
       const shareData = {
         title: 'LINKEO | Un toque. Más conexiones.',
-        text: 'Impulsa tu negocio con soluciones digitales y tarjetas NFC LINKEO.',
+        text: 'Conoce LINKEO y sus soluciones digitales en linkeocards.com:',
         url: LINKEO_URL
       };
 
       if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
         try {
           await navigator.share(shareData);
+          return;
         } catch (err) {
-          if (err.name !== 'AbortError') {
-            copyToClipboard(LINKEO_URL);
-          }
+          if (err.name === 'AbortError') return;
         }
-      } else {
-        copyToClipboard(LINKEO_URL);
       }
+      
+      // Fallback if Web Share API is not supported or rejected
+      await copyToClipboard(LINKEO_URL);
     });
   }
 
-  // QR Code Generation with LINKEO_URL
-  let qrGenerated = false;
-  function renderQRCode() {
-    if (qrGenerated || !qrContainer) return;
-    try {
-      if (typeof qrcode !== 'undefined') {
-        const qr = qrcode(0, 'M');
-        qr.addData(LINKEO_URL);
-        qr.make();
-        qrContainer.innerHTML = qr.createSvgTag({
-          scalable: true,
-          margin: 0
-        });
-        const svg = qrContainer.querySelector('svg');
-        if (svg) {
-          svg.style.width = '100%';
-          svg.style.height = '100%';
-        }
-        qrGenerated = true;
-      }
-    } catch (err) {
-      console.warn('QR code generation failed, using fallback:', err);
-    }
-  }
-
+  // QR Code Modal Trigger
   if (qrTriggerBtn) {
     qrTriggerBtn.addEventListener('click', () => {
-      renderQRCode();
       openModal(qrModal);
     });
   }
@@ -206,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ok && copyBtnText) {
         copyBtnText.textContent = '¡Copiado!';
         setTimeout(() => {
-          copyBtnText.textContent = 'Copiar enlace';
+          copyBtnText.textContent = 'Copiar linkeocards.com';
         }, 2000);
       }
     });

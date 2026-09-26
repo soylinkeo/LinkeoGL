@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
   <!-- Ambient background glow -->
@@ -302,18 +302,29 @@
           </svg>
         </button>
       </div>
-      <div class="qr-preview-box">
-        <div id="qrcode-container"></div>
-      </div>
+      <a href="https://linkeocards.com/" target="_blank" rel="noopener noreferrer" class="qr-preview-box" id="qr-link-wrapper" title="Toca para ir a linkeocards.com">
+        <img id="qr-img" src="qr-linkeo.svg" alt="Código QR de linkeocards.com" width="160" height="160">
+      </a>
       <h3 id="qr-modal-title" class="qr-title">Escanea y visita LINKEO</h3>
-      <p class="qr-desc">Apunta con la cámara para abrir <strong>linkeocards.com</strong> al instante en tu smartphone.</p>
-      <button type="button" class="btn-primary-action" id="copy-profile-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-        <span id="copy-btn-text">Copiar linkeocards.com</span>
-      </button>
+      <p class="qr-desc">Apunta con la cámara para abrir <strong>linkeocards.com</strong> o pulsa una opción:</p>
+      
+      <div class="modal-btn-row">
+        <button type="button" class="btn-primary-action" id="copy-profile-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span id="copy-btn-text">Copiar linkeocards.com</span>
+        </button>
+        <a href="https://linkeocards.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <span>Ir a linkeocards.com</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -325,8 +336,7 @@
     <span id="toast-text">¡Enlace copiado al portapapeles!</span>
   </div>
 
-  <!-- QR Code script (lightweight standalone generator) -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
-  <script src="app.js"></script>
+  <!-- Interactive Script with cache bust version -->
+  <script src="app.js?v=3.0"></script>
 </body>
 </html>

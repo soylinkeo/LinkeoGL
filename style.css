@@ -749,6 +749,13 @@ body {
   line-height: 1.4;
 }
 
+.modal-btn-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
 .btn-primary-action {
   width: 100%;
   padding: 11px 16px;
@@ -765,6 +772,7 @@ body {
   justify-content: center;
   gap: 7px;
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .btn-primary-action:hover {
@@ -774,6 +782,35 @@ body {
 }
 
 .btn-primary-action:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary-action {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-btn);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary-action:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-action:active {
   transform: scale(0.98);
 }
 
