@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>LINKEO | Un toque. Más conexiones.</title>
+  <meta name="title" content="LINKEO | Un toque. Más conexiones.">
+  <meta name="description" content="Impulsa tu negocio con soluciones digitales, tarjetas NFC, Google Reviews, páginas web y sistemas a medida. Elige una opción y conversemos.">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://linkeocards.com/">
+  <meta property="og:title" content="LINKEO | Un toque. Más conexiones.">
+  <meta property="og:description" content="Impulsa tu negocio con soluciones digitales, tarjetas NFC, Google Reviews, páginas web y sistemas a medida.">
+  <meta property="og:image" content="https://linkeocards.com/preview.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="LINKEO | Un toque. Más conexiones.">
+  <meta property="twitter:description" content="Impulsa tu negocio con soluciones digitales, tarjetas NFC, Google Reviews, páginas web y sistemas a medida.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23111215' stroke='%23f59e0b' stroke-width='4'/%3E%3Ctext x='50' y='57' fill='%23ffffff' font-family='system-ui, -apple-system, sans-serif' font-size='20' font-weight='900' letter-spacing='2' text-anchor='middle'%3ELINKEO%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Top Utilities Bar (Share & QR) -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <span class="status-badge">
+        <span class="status-dot"></span>
+        Disponible para proyectos
+      </span>
+      <div class="nav-actions">
+        <button id="qr-trigger-btn" class="icon-btn" aria-label="Ver código QR para compartir" title="Compartir QR">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            <line x1="17" y1="7" x2="17.01" y2="7"></line>
+            <line x1="7" y1="17" x2="7.01" y2="17"></line>
+            <line x1="17" y1="17" x2="17.01" y2="17"></line>
+          </svg>
+        </button>
+        <button id="share-trigger-btn" class="icon-btn" aria-label="Compartir perfil" title="Compartir enlace">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <!-- Profile Header Section -->
+    <header class="profile-header">
+      <!-- Circular Avatar Badge with Golden Glow -->
+      <div class="avatar-container">
+        <div class="avatar-ring"></div>
+        <div class="avatar-badge">
+          <span class="avatar-text">LINKEO</span>
+        </div>
+      </div>
+
+      <!-- Main Title & Tagline -->
+      <h1 class="brand-title">LINKEO</h1>
+      <p class="brand-tagline">Un toque. <span class="highlight-gold">Más conexiones.</span></p>
+      
+      <!-- Bio Description -->
+      <p class="brand-bio">
+        Impulsa tu negocio con soluciones digitales. Elige una opción y conversemos.
+      </p>
+    </header>
+
+    <!-- Links / Action Cards Section -->
+    <section class="links-section" aria-label="Enlaces de contacto y canales oficiales">
+      
+      <!-- 1. Cotiza por WhatsApp (Highlighted Card) -->
+      <button class="link-card card-featured" id="whatsapp-card-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">
+        <div class="card-left">
+          <div class="card-icon-box bg-gold-badge" aria-hidden="true">
+            <!-- Chat bubble with 3 dots inside -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 9h-2V7h2v4zm-4 0H8V7h2v4zm8 0h-2V7h2v4z"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <span class="card-title">Cotiza por WhatsApp</span>
+            <span class="card-subtitle">Escríbenos y recibe información</span>
+          </div>
+        </div>
+        <div class="card-arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </button>
+
+      <!-- 2. Nuestra página web -->
+      <a href="https://linkeocards.com/" target="_blank" rel="noopener noreferrer" class="link-card" id="link-web">
+        <div class="card-left">
+          <div class="card-icon-box bg-dark-box icon-cyan" aria-hidden="true">
+            <!-- Globe Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="card-text">
+            <span class="card-title">Nuestra página web</span>
+            <span class="card-subtitle">Conoce LINKEO y nuestros productos</span>
+          </div>
+        </div>
+        <div class="card-arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 3. Instagram -->
+      <a href="https://www.instagram.com/linkeo_pe/" target="_blank" rel="noopener noreferrer" class="link-card" id="link-instagram">
+        <div class="card-left">
+          <div class="card-icon-box bg-dark-box icon-instagram" aria-hidden="true">
+            <!-- Instagram Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="card-text">
+            <span class="card-title">Instagram</span>
+            <span class="card-subtitle">@linkeo_pe</span>
+          </div>
+        </div>
+        <div class="card-arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 4. TikTok -->
+      <a href="https://www.tiktok.com/@linkeocards?lang=es" target="_blank" rel="noopener noreferrer" class="link-card" id="link-tiktok">
+        <div class="card-left">
+          <div class="card-icon-box bg-dark-box icon-tiktok" aria-hidden="true">
+            <!-- TikTok Musical Note Icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.891 2.896 2.896 0 0 1 2.891-2.891c.367 0 .717.07 1.038.199V9.458a6.34 6.34 0 0 0-1.038-.087A6.336 6.336 0 0 0 3.147 15.707 6.336 6.336 0 0 0 9.483 22.043a6.336 6.336 0 0 0 6.336-6.336V8.62a8.214 8.214 0 0 0 3.77 1.055V6.686z"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <span class="card-title">TikTok</span>
+            <span class="card-subtitle">@linkeo_pe</span>
+          </div>
+        </div>
+        <div class="card-arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 5. Productos NFC -->
+      <a href="https://linkeocards.com/" target="_blank" rel="noopener noreferrer" class="link-card" id="link-nfc">
+        <div class="card-left">
+          <div class="card-icon-box bg-dark-box icon-gold" aria-hidden="true">
+            <!-- Lightning Bolt Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="card-text">
+            <span class="card-title">Productos NFC</span>
+            <span class="card-subtitle">Tarjetas y stands para tu negocio</span>
+          </div>
+        </div>
+        <div class="card-arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Bottom Section: "También desarrollamos" -->
+    <section class="services-card" aria-label="Otros servicios desarrollados por LINKEO">
+      <h2 class="services-title">También desarrollamos</h2>
+      <div class="pill-tags-grid">
+        <button type="button" class="service-pill" data-service="Tarjetas NFC">Tarjetas NFC</button>
+        <button type="button" class="service-pill" data-service="Google Reviews">Google Reviews</button>
+        <button type="button" class="service-pill" data-service="Páginas web">Páginas web</button>
+        <button type="button" class="service-pill" data-service="Sistemas para negocios">Sistemas para negocios</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="profile-footer">
+      <p class="footer-brand">LINKEO</p>
+      <p class="footer-tagline">Un toque. Más conexiones.</p>
+      <p class="footer-copy">© <span id="current-year">2026</span> LINKEO</p>
+    </footer>
+  </main>
+
+  <!-- WhatsApp Selection Modal (Numbers: 937 721 429 & 907362779) -->
+  <div id="whatsapp-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="wa-modal-title" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-icon bg-gold-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 9h-2V7h2v4zm-4 0H8V7h2v4zm8 0h-2V7h2v4z"/>
+          </svg>
+        </div>
+        <div class="modal-header-text">
+          <h3 id="wa-modal-title">Conversa con LINKEO</h3>
+          <p id="wa-modal-desc">Elige a un asesor disponible para cotizar:</p>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-wa" aria-label="Cerrar ventana">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="wa-options-list">
+        <!-- Number 1: 937 721 429 -->
+        <a href="https://wa.me/51937721429?text=Hola%20LINKEO%2C%20quisiera%20cotizar%20soluciones%20digitales%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="wa-contact-card" id="wa-contact-1">
+          <div class="wa-contact-avatar">
+            <span>1</span>
+          </div>
+          <div class="wa-contact-info">
+            <span class="wa-contact-name">Asesor de Ventas & Cotizaciones</span>
+            <span class="wa-contact-number">+51 937 721 429</span>
+          </div>
+          <div class="wa-contact-badge">
+            <span>Escribir</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Number 2: 907 362 779 -->
+        <a href="https://wa.me/51907362779?text=Hola%20LINKEO%2C%20quisiera%20cotizar%20soluciones%20digitales%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="wa-contact-card" id="wa-contact-2">
+          <div class="wa-contact-avatar">
+            <span>2</span>
+          </div>
+          <div class="wa-contact-info">
+            <span class="wa-contact-name">Atención Directa & Proyectos</span>
+            <span class="wa-contact-number">+51 907 362 779</span>
+          </div>
+          <div class="wa-contact-badge">
+            <span>Escribir</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="modal-footer-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Respuesta rápida y asesoría personalizada inmediata.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+  <div id="qr-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title" hidden>
+    <div class="modal-card modal-card-sm text-center">
+      <div class="modal-close-wrapper">
+        <button type="button" class="modal-close-btn" id="modal-close-qr" aria-label="Cerrar QR">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="qr-preview-box">
+        <div id="qrcode-container"></div>
+      </div>
+      <h3 id="qr-modal-title" class="qr-title">Escanea y comparte LINKEO</h3>
+      <p class="qr-desc">Apunta con la cámara de tu smartphone para abrir este perfil al instante.</p>
+      <button type="button" class="btn-primary-action" id="copy-profile-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span id="copy-btn-text">Copiar enlace</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-message" class="toast" role="status" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-text">¡Enlace copiado al portapapeles!</span>
+  </div>
+
+  <!-- QR Code script (lightweight standalone generator) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
