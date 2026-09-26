@@ -1,6 +1,7 @@
 /* ==========================================================================
    LINKEO Design System & Modern Bio-Link Styles
-   Aesthetic: Dark Luxury / Obsidian Black + Ambient Gold
+   Aesthetic: Dark Luxury / Obsidian Black + Amber Gold
+   Optimized for compact, balanced smartphone viewing
    ========================================================================== */
 
 :root {
@@ -14,10 +15,9 @@
   --color-gold-hover: #fbbf24;
   --color-gold-muted: rgba(245, 158, 11, 0.15);
   --color-gold-border: rgba(245, 158, 11, 0.65);
-  --color-gold-glow: rgba(245, 158, 11, 0.22);
+  --color-gold-glow: rgba(245, 158, 11, 0.2);
   
   --color-cyan: #38bdf8;
-  --color-cyan-muted: rgba(56, 189, 248, 0.15);
   
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
@@ -27,12 +27,12 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.18);
   
-  --radius-card: 16px;
+  --radius-card: 14px;
   --radius-pill: 9999px;
-  --radius-btn: 12px;
+  --radius-btn: 11px;
   
-  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
   --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -61,7 +61,7 @@ body {
   position: relative;
   background-color: var(--bg-main);
   overflow-x: hidden;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 
 /* Ambient radial glow at top behind avatar */
@@ -71,32 +71,32 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: 900px;
-  height: 480px;
+  max-width: 720px;
+  height: 380px;
   background: radial-gradient(
-    ellipse 540px 320px at 50% 12%,
-    rgba(245, 158, 11, 0.16) 0%,
-    rgba(245, 158, 11, 0.05) 45%,
+    ellipse 460px 260px at 50% 10%,
+    rgba(245, 158, 11, 0.15) 0%,
+    rgba(245, 158, 11, 0.04) 45%,
     rgba(9, 10, 12, 0) 80%
   );
   pointer-events: none;
   z-index: 0;
 }
 
-/* Utilities Top Nav */
+/* Utilities Top Nav (Compact) */
 .top-nav {
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 12px 16px;
+  padding: 8px 14px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(9, 10, 12, 0.6);
+  background: rgba(9, 10, 12, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .nav-container {
-  max-width: 520px;
+  max-width: 440px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -106,22 +106,22 @@ body {
 .status-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 11.5px;
+  gap: 6px;
+  font-size: 11px;
   font-weight: 500;
   color: #94a3b8;
   background: rgba(255, 255, 255, 0.04);
-  padding: 5px 11px;
+  padding: 4px 10px;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .status-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   background: #22c55e;
   border-radius: 50%;
-  box-shadow: 0 0 8px #22c55e;
+  box-shadow: 0 0 6px #22c55e;
   animation: pulse-dot 2.5s infinite;
 }
 
@@ -132,21 +132,26 @@ body {
 
 .nav-actions {
   display: flex;
-  gap: 8px;
+  gap: 7px;
 }
 
 .icon-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: var(--text-secondary);
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
+}
+
+.icon-btn svg {
+  width: 15px;
+  height: 15px;
 }
 
 .icon-btn:hover {
@@ -157,37 +162,37 @@ body {
 }
 
 .icon-btn:active {
-  transform: scale(0.94);
+  transform: scale(0.92);
 }
 
-/* Page Wrapper */
+/* Page Wrapper (Compact & Focused) */
 .page-wrapper {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 480px;
+  max-width: 430px;
   margin: 0 auto;
-  padding: 16px 20px 24px;
+  padding: 10px 14px 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Profile Header Section */
+/* Profile Header Section (Compact) */
 .profile-header {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 28px;
+  margin-top: 4px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Circular Avatar Badge */
+/* Circular Avatar Badge (80px compact) */
 .avatar-container {
   position: relative;
-  width: 96px;
-  height: 96px;
-  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +210,7 @@ body {
     rgba(245, 158, 11, 0.2) 360deg
   );
   filter: blur(1px);
-  box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.32);
   animation: rotate-slow 14s linear infinite;
 }
 
@@ -216,41 +221,41 @@ body {
 
 .avatar-badge {
   position: relative;
-  width: 94px;
-  height: 94px;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #1d1e24 0%, #101115 100%);
   border: 2px solid rgba(245, 158, 11, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.08), 0 8px 24px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.08), 0 6px 20px rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
 
 .avatar-text {
-  font-size: 17px;
+  font-size: 14.5px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Titles */
 .brand-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   line-height: 1.2;
 }
 
 .brand-tagline {
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   color: #e5e7eb;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .highlight-gold {
@@ -259,11 +264,11 @@ body {
 }
 
 .brand-bio {
-  font-size: 13.8px;
+  font-size: 12.8px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.48;
   color: var(--text-secondary);
-  max-width: 380px;
+  max-width: 340px;
   margin: 0 auto;
 }
 
@@ -271,17 +276,17 @@ body {
 .links-section {
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  margin-bottom: 22px;
+  gap: 9.5px;
+  margin-bottom: 16px;
 }
 
-/* Link Cards Base */
+/* Link Cards Base (Compact) */
 .link-card {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 18px;
+  padding: 10px 14px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
@@ -299,8 +304,8 @@ body {
 .link-card:hover {
   background-color: var(--bg-card-hover);
   border-color: var(--border-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .link-card:active {
@@ -310,19 +315,19 @@ body {
 
 .link-card:focus-visible {
   border-color: var(--color-gold);
-  box-shadow: 0 0 0 3px var(--color-gold-muted);
+  box-shadow: 0 0 0 2px var(--color-gold-muted);
 }
 
 /* Featured Card (Cotiza por WhatsApp) */
 .card-featured {
   border-color: var(--color-gold-border);
-  box-shadow: 0 0 20px var(--color-gold-glow), inset 0 1px 0 rgba(245, 158, 11, 0.2);
+  box-shadow: 0 0 16px var(--color-gold-glow), inset 0 1px 0 rgba(245, 158, 11, 0.2);
   background: linear-gradient(180deg, #16171b 0%, #111215 100%);
 }
 
 .card-featured:hover {
   border-color: var(--color-gold);
-  box-shadow: 0 0 28px rgba(245, 158, 11, 0.35), 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 22px rgba(245, 158, 11, 0.3), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
 .card-featured .card-arrow {
@@ -333,30 +338,35 @@ body {
 .card-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   text-align: left;
 }
 
-/* Icon Containers */
+/* Icon Containers (Compact 38px) */
 .card-icon-box {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform var(--transition-fast);
 }
 
+.card-icon-box svg {
+  width: 19px;
+  height: 19px;
+}
+
 .link-card:hover .card-icon-box {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .bg-gold-badge {
   background-color: var(--color-gold);
   color: #0b0c0e;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
 }
 
 .bg-dark-box {
@@ -384,18 +394,18 @@ body {
 .card-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1.5px;
 }
 
 .card-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
 }
 
 .card-subtitle {
-  font-size: 12.5px;
+  font-size: 11.8px;
   font-weight: 400;
   color: var(--text-secondary);
   line-height: 1.3;
@@ -410,34 +420,39 @@ body {
   transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
+.card-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
 .link-card:hover .card-arrow {
-  transform: translateX(3px);
+  transform: translateX(2.5px);
   color: var(--text-primary);
 }
 
-/* "También desarrollamos" Section */
+/* "También desarrollamos" Section (Compact) */
 .services-card {
   background-color: #101115;
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--radius-card);
-  padding: 20px 18px;
+  padding: 14px 14px;
   text-align: center;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .services-title {
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #e5e7eb;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
 
 .pill-tags-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 7px;
   justify-content: center;
 }
 
@@ -445,9 +460,9 @@ body {
   background-color: #17181d;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #d1d5db;
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 6px 13px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   outline: none;
@@ -461,11 +476,11 @@ body {
   border-color: var(--color-gold);
   color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.2);
 }
 
 .service-pill:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
   background-color: #141519;
 }
 
@@ -474,26 +489,26 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   margin-top: auto;
 }
 
 .footer-brand {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: var(--text-secondary);
 }
 
 .footer-tagline {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
 }
 
 .footer-copy {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-dim);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* ==========================================================================
@@ -509,7 +524,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 14px;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-normal);
@@ -522,13 +537,13 @@ body {
 
 .modal-card {
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
   background-color: #141519;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.15);
-  transform: translateY(16px) scale(0.96);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 24px rgba(245, 158, 11, 0.12);
+  transform: translateY(12px) scale(0.97);
   transition: transform var(--transition-normal);
   position: relative;
 }
@@ -538,7 +553,7 @@ body {
 }
 
 .modal-card-sm {
-  max-width: 360px;
+  max-width: 320px;
 }
 
 .text-center {
@@ -572,18 +587,23 @@ body {
 .modal-header {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .modal-header-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal-header-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .modal-header-text {
@@ -591,34 +611,34 @@ body {
 }
 
 .modal-header-text h3 {
-  font-size: 17px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
 }
 
 .modal-header-text p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 /* WhatsApp Option Contacts */
 .wa-options-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .wa-contact-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 16px;
+  padding: 11px 13px;
   background-color: #1c1e24;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  border-radius: 12px;
   text-decoration: none;
   color: inherit;
   transition: all var(--transition-fast);
@@ -627,8 +647,8 @@ body {
 .wa-contact-card:hover {
   background-color: #242730;
   border-color: var(--color-gold);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .wa-contact-card:active {
@@ -636,18 +656,18 @@ body {
 }
 
 .wa-contact-avatar {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(245, 158, 11, 0.15);
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 13.5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .wa-contact-info {
@@ -657,13 +677,13 @@ body {
 }
 
 .wa-contact-name {
-  font-size: 13.5px;
+  font-size: 12.8px;
   font-weight: 700;
   color: #ffffff;
 }
 
 .wa-contact-number {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--color-gold);
   margin-top: 1px;
@@ -672,79 +692,85 @@ body {
 .wa-contact-badge {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 12px;
+  gap: 3px;
+  font-size: 11px;
   font-weight: 600;
   color: #22c55e;
   background: rgba(34, 197, 94, 0.12);
-  padding: 6px 10px;
+  padding: 5px 8px;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.wa-contact-badge svg {
+  width: 14px;
+  height: 14px;
 }
 
 .modal-footer-note {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 12px;
+  gap: 6px;
+  font-size: 11.5px;
   color: var(--text-muted);
   justify-content: center;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 /* QR Code Modal Styles */
 .qr-preview-box {
   background: #ffffff;
-  padding: 16px;
-  border-radius: 16px;
+  padding: 12px;
+  border-radius: 14px;
   display: inline-block;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  margin-bottom: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .qr-preview-box img,
-.qr-preview-box canvas {
+.qr-preview-box canvas,
+.qr-preview-box svg {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
 }
 
 .qr-title {
-  font-size: 17px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .qr-desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
-  margin-bottom: 20px;
-  line-height: 1.45;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 .btn-primary-action {
   width: 100%;
-  padding: 13px 18px;
+  padding: 11px 16px;
   border-radius: var(--radius-btn);
   background: var(--color-gold);
   color: #0b0c0e;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
   transition: all var(--transition-fast);
 }
 
 .btn-primary-action:hover {
   background: var(--color-gold-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
 }
 
 .btn-primary-action:active {
@@ -754,18 +780,18 @@ body {
 /* Toast Message */
 .toast {
   position: fixed;
-  bottom: 28px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(40px);
   background: #1e2026;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  padding: 11px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  padding: 9px 16px;
   border-radius: var(--radius-pill);
   display: flex;
   align-items: center;
-  gap: 9px;
-  font-size: 13px;
+  gap: 8px;
+  font-size: 12.5px;
   font-weight: 600;
   color: #ffffff;
   z-index: 200;
@@ -779,46 +805,34 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 480px) {
+/* Extra Compact on Small Smartphone Screens */
+@media (max-width: 360px) {
   .page-wrapper {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .brand-title {
-    font-size: 26px;
+    font-size: 22px;
   }
   
-  .brand-tagline {
-    font-size: 14.5px;
+  .avatar-container {
+    width: 72px;
+    height: 72px;
   }
   
-  .brand-bio {
-    font-size: 13px;
+  .avatar-badge {
+    width: 70px;
+    height: 70px;
   }
 
   .link-card {
-    padding: 12px 15px;
-  }
-  
-  .card-icon-box {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 11px;
-  }
-  
-  .card-title {
-    font-size: 14.5px;
-  }
-  
-  .card-subtitle {
-    font-size: 12px;
+    padding: 8px 11px;
   }
 
-  .modal-card {
-    padding: 20px 18px;
-    border-radius: 18px;
+  .card-icon-box {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
   }
 }

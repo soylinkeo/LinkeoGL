@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const PHONE_1 = '51937721429'; // 937 721 429
   const PHONE_2 = '51907362779'; // 907 362 779
   
+  // Constants
+  const LINKEO_URL = 'https://linkeocards.com/';
   const DEFAULT_MESSAGE = '¡Hola LINKEO! Quisiera cotizar soluciones digitales para mi negocio.';
 
   // DOM Elements
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.execCommand('copy');
         document.body.removeChild(textarea);
       }
-      showToast('¡Enlace copiado al portapapeles!');
+      showToast('¡Enlace de linkeocards.com copiado!');
       return true;
     } catch (err) {
       console.error('Error copying to clipboard:', err);
@@ -139,13 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Native Share or Fallback Copy
+  // Native Share or Fallback Copy (using LINKEO_URL)
   if (shareTriggerBtn) {
     shareTriggerBtn.addEventListener('click', async () => {
       const shareData = {
         title: 'LINKEO | Un toque. Más conexiones.',
         text: 'Impulsa tu negocio con soluciones digitales y tarjetas NFC LINKEO.',
-        url: window.location.href
+        url: LINKEO_URL
       };
 
       if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
@@ -153,28 +155,23 @@ document.addEventListener('DOMContentLoaded', () => {
           await navigator.share(shareData);
         } catch (err) {
           if (err.name !== 'AbortError') {
-            copyToClipboard(window.location.href);
+            copyToClipboard(LINKEO_URL);
           }
         }
       } else {
-        copyToClipboard(window.location.href);
+        copyToClipboard(LINKEO_URL);
       }
     });
   }
 
-  // QR Code Generation
+  // QR Code Generation with LINKEO_URL
   let qrGenerated = false;
   function renderQRCode() {
     if (qrGenerated || !qrContainer) return;
     try {
-      const targetUrl = window.location.href.startsWith('http') 
-        ? window.location.href 
-        : 'https://linkeocards.com/';
-      
-      // Type 4 or 0 (auto-detect), Error correction level 'M'
       if (typeof qrcode !== 'undefined') {
         const qr = qrcode(0, 'M');
-        qr.addData(targetUrl);
+        qr.addData(LINKEO_URL);
         qr.make();
         qrContainer.innerHTML = qr.createSvgTag({
           scalable: true,
@@ -205,8 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyProfileBtn) {
     copyProfileBtn.addEventListener('click', async () => {
-      const url = window.location.href.startsWith('http') ? window.location.href : 'https://linkeocards.com/';
-      const ok = await copyToClipboard(url);
+      const ok = await copyToClipboard(LINKEO_URL);
       if (ok && copyBtnText) {
         copyBtnText.textContent = '¡Copiado!';
         setTimeout(() => {
